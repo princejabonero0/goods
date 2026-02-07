@@ -50,7 +50,7 @@ public UserDashboard() {
 
         lblWelcome.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lblWelcome.setText("WELCOME!");
-        jPanel1.add(lblWelcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, -1, -1));
+        jPanel1.add(lblWelcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, -1, -1));
 
         btnViewDonors.setText("View Donors");
         btnViewDonors.addActionListener(new java.awt.event.ActionListener() {
@@ -93,6 +93,7 @@ public UserDashboard() {
 
     private void btnViewDonorsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewDonorsActionPerformed
         new DonorManagement().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnViewDonorsActionPerformed
 
     private void btnDonationRecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDonationRecordsActionPerformed

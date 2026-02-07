@@ -33,45 +33,33 @@ public class RegisterForm extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        lblType = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        lblTitle = new javax.swing.JLabel();
         lblName = new javax.swing.JLabel();
+        txtName = new javax.swing.JTextField();
         lblEmail = new javax.swing.JLabel();
+        btnBackToLogin = new javax.swing.JButton();
+        btnRegister = new javax.swing.JButton();
+        lblType = new javax.swing.JLabel();
         lblPassword = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
-        txtName = new javax.swing.JTextField();
         txtPassword = new javax.swing.JPasswordField();
         cmbType = new javax.swing.JComboBox<>();
-        btnRegister = new javax.swing.JButton();
-        btnBackToLogin = new javax.swing.JButton();
-        lblTitle = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(44, 62, 80));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblType.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblType.setText("Type");
-        jPanel1.add(lblType, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, -1, -1));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblTitle.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        lblTitle.setText("Be A LifeSaver Today!");
+        jPanel3.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         lblName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblName.setText("Name");
-        jPanel1.add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, -1, -1));
-
-        lblEmail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblEmail.setText("Email");
-        jPanel1.add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, -1, -1));
-
-        lblPassword.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblPassword.setText("Password");
-        jPanel1.add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, -1, -1));
-
-        txtEmail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtEmail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEmailActionPerformed(evt);
-            }
-        });
-        jPanel1.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, 130, -1));
+        lblName.setText("Full Name:");
+        jPanel3.add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
 
         txtName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtName.addActionListener(new java.awt.event.ActionListener() {
@@ -79,28 +67,11 @@ public class RegisterForm extends javax.swing.JFrame {
                 txtNameActionPerformed(evt);
             }
         });
-        jPanel1.add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 130, -1));
+        jPanel3.add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 260, 40));
 
-        txtPassword.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPasswordActionPerformed(evt);
-            }
-        });
-        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 130, -1));
-
-        cmbType.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        cmbType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "user", "admin", " " }));
-        jPanel1.add(cmbType, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, 130, -1));
-
-        btnRegister.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        btnRegister.setText("Register");
-        btnRegister.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegisterActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 350, -1, -1));
+        lblEmail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblEmail.setText("Email:");
+        jPanel3.add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
 
         btnBackToLogin.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnBackToLogin.setText("Back to Login");
@@ -109,11 +80,46 @@ public class RegisterForm extends javax.swing.JFrame {
                 btnBackToLoginActionPerformed(evt);
             }
         });
-        jPanel1.add(btnBackToLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, -1, -1));
+        jPanel3.add(btnBackToLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 260, 40));
 
-        lblTitle.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        lblTitle.setText("Be A LifeSaver Today!");
-        jPanel1.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, -1));
+        btnRegister.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        btnRegister.setText("Register");
+        btnRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisterActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 260, 40));
+
+        lblType.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblType.setText("Type:");
+        jPanel3.add(lblType, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
+
+        lblPassword.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblPassword.setText("Password:");
+        jPanel3.add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
+
+        txtEmail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEmailActionPerformed(evt);
+            }
+        });
+        jPanel3.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 260, 40));
+
+        txtPassword.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPasswordActionPerformed(evt);
+            }
+        });
+        jPanel3.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 260, 40));
+
+        cmbType.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        cmbType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "user", "admin", " " }));
+        jPanel3.add(cmbType, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 260, 40));
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 350, 520));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -142,34 +148,30 @@ public class RegisterForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPasswordActionPerformed
 
-    private void btnBackToLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackToLoginActionPerformed
-        new LoginForm().setVisible(true);
-        this.dispose();    }//GEN-LAST:event_btnBackToLoginActionPerformed
-
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-String name = txtName.getText().trim();
+        String name = txtName.getText().trim();
         String email = txtEmail.getText().trim();
         String password = new String(txtPassword.getPassword()).trim();
         String type = cmbType.getSelectedItem().toString();
-        
+
         if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Please fill in all fields!", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
-        
+
         if (!email.contains("@") || !email.contains(".")) {
             JOptionPane.showMessageDialog(this, "Please enter a valid email!", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
-        
+
         if (password.length() < 6) {
             JOptionPane.showMessageDialog(this, "Password must be at least 6 characters!", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
-        
+
         config conf = new config();
         String sql = "INSERT INTO users (name, email, password, type) VALUES (?, ?, ?, ?)";
-        
+
         try {
             conf.addRecord(sql, name, email, password, type);
             JOptionPane.showMessageDialog(this, "Registration Successful!", "Success", JOptionPane.INFORMATION_MESSAGE);
@@ -178,8 +180,12 @@ String name = txtName.getText().trim();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Registration Failed! Email may already exist.", "Error", JOptionPane.ERROR_MESSAGE);
         }
-    
+
     }//GEN-LAST:event_btnRegisterActionPerformed
+
+    private void btnBackToLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackToLoginActionPerformed
+        new LoginForm().setVisible(true);
+    }//GEN-LAST:event_btnBackToLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -221,6 +227,7 @@ String name = txtName.getText().trim();
     private javax.swing.JButton btnRegister;
     private javax.swing.JComboBox<String> cmbType;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblPassword;

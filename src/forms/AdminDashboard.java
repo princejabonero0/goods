@@ -70,7 +70,6 @@ public class AdminDashboard extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblUsers = new javax.swing.JTable();
         btnViewDonors = new javax.swing.JButton();
@@ -85,7 +84,6 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(458, 0, -1, 500));
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 90, 20, 80));
 
         tblUsers.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -95,12 +93,16 @@ public class AdminDashboard extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "ID no.", "Name", "Email", "Type"
+                "ID no", "Name", "Email", "Type"
             }
         ));
         jScrollPane1.setViewportView(tblUsers);
+        if (tblUsers.getColumnModel().getColumnCount() > 0) {
+            tblUsers.getColumnModel().getColumn(0).setPreferredWidth(5);
+            tblUsers.getColumnModel().getColumn(3).setPreferredWidth(10);
+        }
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 480, 90));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 430, 90));
 
         btnViewDonors.setText("View Donors");
         btnViewDonors.addActionListener(new java.awt.event.ActionListener() {
@@ -108,18 +110,18 @@ public class AdminDashboard extends javax.swing.JFrame {
                 btnViewDonorsActionPerformed(evt);
             }
         });
-        getContentPane().add(btnViewDonors, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+        getContentPane().add(btnViewDonors, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 130, 50));
 
-        btnViewInventory.setText("View Inventory");
+        btnViewInventory.setText("Blood Inventory");
         btnViewInventory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewInventoryActionPerformed(evt);
             }
         });
-        getContentPane().add(btnViewInventory, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
+        getContentPane().add(btnViewInventory, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 120, 50));
 
-        btnViewRecords.setText("View Records");
-        getContentPane().add(btnViewRecords, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
+        btnViewRecords.setText("Donation Records");
+        getContentPane().add(btnViewRecords, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 120, 50));
 
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -127,7 +129,7 @@ public class AdminDashboard extends javax.swing.JFrame {
                 btnLogoutActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, -1, -1));
+        getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, -1, -1));
 
         btnRefresh.setText("Refresh");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
@@ -135,11 +137,11 @@ public class AdminDashboard extends javax.swing.JFrame {
                 btnRefreshActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, -1, -1));
+        getContentPane().add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, -1, -1));
 
         lblTitle.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lblTitle.setText("ADMIN DASHBOARD");
-        getContentPane().add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
+        getContentPane().add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -151,6 +153,7 @@ public class AdminDashboard extends javax.swing.JFrame {
 
     private void btnViewDonorsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewDonorsActionPerformed
        new DonorManagement().setVisible(true);
+       this.dispose();
     }//GEN-LAST:event_btnViewDonorsActionPerformed
 
     private void btnViewInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewInventoryActionPerformed
@@ -208,7 +211,6 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JButton btnViewRecords;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JTable tblUsers;
     // End of variables declaration//GEN-END:variables
